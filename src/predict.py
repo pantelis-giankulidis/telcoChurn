@@ -10,7 +10,6 @@ class Predictor:
 
     def predict(self, features: dict)-> dict:
         df = pd.DataFrame([features])
-        # NOTE: preprocessing must match training
         df = pd.get_dummies(df, drop_first=True)
         prob = self.model.predict(df)[0]
         label = "Yes" if prob > 0.5 else "No"

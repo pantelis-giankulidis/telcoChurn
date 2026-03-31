@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from src.predict import Predictor
+from predict import Predictor
 
 app = FastAPI(title = "Telco churn prediction API service")
 predictor = Predictor()
@@ -9,7 +9,6 @@ class CustomerData(BaseModel):
     AvgMonthlyLongDistanceCharges: float
     population: float
     AvgMonthlyGBDownload: float
-    # Add all necessary features here
 
 @app.get("/health")
 def health_check():
