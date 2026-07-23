@@ -1,10 +1,9 @@
 import joblib
-from sklearn import datasets, ensemble
+from sklearn import ensemble
 from sklearn.metrics import accuracy_score
 from sklearn.inspection import permutation_importance
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
-from sklearn.utils.fixes import parse_version
 from data import load_data, preprocess_data, split_data
 
 def train():
